@@ -26,6 +26,6 @@ Both implementations of the MVG sampler take the row-wise and column-wise covari
 
 The module is implemented in Python 2. and uses `numpy`.
 
-## Authors
+## Author
 
 * **Thee Chanyaswad**
