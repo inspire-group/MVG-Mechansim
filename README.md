@@ -2,7 +2,7 @@
 
 A module to assist with the implementation of the Matrix-Variate Gaussian (MVG) mechanism for differential privacy under matrix-valued query. Please see the following paper for the detail on the MVG mechanism.
 
-*Thee Chanyaswad, Alex Dytso, H. Vincent Poor, and Prateek Mittal. "MVG Mechanism: Differential Privacy under Matrix-Valued Query." arXiv preprint arXiv:1801.00823 (2018).* (https://arxiv.org/abs/1801.00823)
+*Thee Chanyaswad, Alex Dytso, H. Vincent Poor, and Prateek Mittal. "MVG Mechanism: Differential Privacy under Matrix-Valued Query." 2018 ACM SIGSAC Conference on Computer and Communications Security (CCS'18), 2018.* (https://dl.acm.org/citation.cfm?doid=3243734.3243750)
 
 
 
