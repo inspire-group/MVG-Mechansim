@@ -39,16 +39,16 @@ def generate_mvg_noise_via_affine_tx(rowCov,colCov):
 	Bpsi = np.inner(uPsi,sPsi.T)
 	
 	#affine tx
-	sampMvg = np.inner(np.inner(Bpsi,sampIid.T),Bsig)
+	sampMvg = np.inner(np.inner(Bpsi,sampIid.T),Bsig).T
 	
 	return sampMvg
 
 
 def generate_mvg_noise_via_multivariate_gaussian(rowCov,colCov):
 	cov = np.kron(colCov,rowCov)
-	muVec = np.zeros(cov.shape)
+	muVec = np.zeros(len(cov))
 	sampVect = np.random.multivariate_normal(muVec, cov, size=1)
-	sampMvg = sampVect.reshape(mu.shape,order='F')
+	sampMvg = sampVect.reshape((len(rowCov),len(colCov)),order='F')
 	return sampMvg
 
 
@@ -56,5 +56,5 @@ def _get_harmonic_num(order,power=1.0):
 	if order == 1:
 		value = 1.0
 	else:
-		value = 1.0/(order**power) + get_harmonic_num(order-1,power=power)
+		value = 1.0/(order**power) + _get_harmonic_num(order-1,power=power)
 	return value
