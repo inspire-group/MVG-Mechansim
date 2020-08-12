@@ -16,7 +16,7 @@ def compute_precision_budget(m, n, gamma, s2, epsilon, delta):
 	harmR1 = _get_harmonic_num(maxRank,1)
 	harmR12 = _get_harmonic_num(maxRank,0.5)
 	alpha = (harmR1 + harmR12) * (gamma ** 2) + 2*harmR1*gamma*s2
-	zeta = np.sqrt(2*np.sqrt(-m*n*np.log(delta))-2*np.log(delta) + m*n)
+	zeta = 2*np.sqrt(-m*n*np.log(delta))-2*np.log(delta) + m*n
 	beta = 2*((m*n)**0.25)*zeta*harmR1*s2
 	
 	#get total precision budget
